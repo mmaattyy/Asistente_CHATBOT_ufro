@@ -1,0 +1,83 @@
+[
+  {
+    "question": "¿Cuándo inician las clases del segundo semestre 2025 según el calendario académico?",
+    "expected": "Lunes 4 de agosto de 2025."
+  },
+  {
+    "question": "¿Cuál es la fecha límite para solicitar eliminación voluntaria de asignaturas en el 2º semestre de 2025?",
+    "expected": "Viernes 17 de octubre de 2025."
+  },
+  {
+    "question": "¿Hasta cuándo se puede solicitar postergación de estudios para el 2º semestre de 2025?",
+    "expected": "Viernes 25 de julio de 2025."
+  },
+  {
+    "question": "¿En qué fecha se deben publicar las fechas de exámenes de repetición para asignaturas semestrales en 2025?",
+    "expected": "Jueves 17 de julio de 2025."
+  },
+  {
+    "question": "¿Cuándo es el receso universitario de fin de año según el calendario académico 2025?",
+    "expected": "Miércoles 31 de diciembre de 2025 (receso universitario)."
+  },
+  {
+    "question": "¿Qué día es feriado nacional por Encuentro de Dos Mundos según el calendario 2025?",
+    "expected": "Sábado 4 de octubre de 2025."
+  },
+  {
+    "question": "¿Qué periodo del 2025 está destinado a la regularización académica y financiera de estudiantes de cursos superiores?",
+    "expected": "Lunes 5 a viernes 23 de enero de 2025."
+  },
+  {
+    "question": "Según el calendario académico 2025, ¿en qué fechas ocurre la semana de inducción o actividades iniciales del segundo semestre?",
+    "expected": "Lunes 28 de julio a viernes 1 de agosto de 2025 (periodo previo al inicio de clases)."
+  },
+  {
+    "question": "¿Qué feriado nacional se consigna para el 25 de diciembre de 2025?",
+    "expected": "Navidad (feriado nacional, jueves 25 de diciembre de 2025)."
+  },
+  {
+    "question": "¿Qué URL oficial referencia el calendario académico 2025 de la UFRO?",
+    "expected": "https://www.ufro.cl/calendario-academico/"
+  },
+
+  {
+    "question": "Según el Reglamento de Convivencia Universitaria, ¿qué deber general se establece respecto del trato entre integrantes de la comunidad?",
+    "expected": "Deber de respeto mutuo y no discriminación entre estudiantes, académicos y funcionarios."
+  },
+  {
+    "question": "De acuerdo con el Reglamento de Convivencia, ¿qué canal o instancia contempla la universidad para denuncias de conductas que afecten la sana convivencia?",
+    "expected": "Mecanismos formales de denuncia y tramitación institucional (instancias competentes definidas por la universidad)."
+  },
+  {
+    "question": "En el Reglamento de Convivencia, ¿se señalan principios como dignidad, inclusión y buen trato?",
+    "expected": "Sí, se enuncian principios como dignidad, inclusión, igualdad de oportunidades y buen trato."
+  },
+  {
+    "question": "Según el Reglamento de Régimen de Estudios 2023, ¿qué se entiende por estudiante regular?",
+    "expected": "Estudiante con matrícula vigente que cumple los requisitos académicos establecidos por la universidad."
+  },
+  {
+    "question": "De acuerdo al Régimen de Estudios 2023, ¿existe la figura de eliminación voluntaria de asignaturas?",
+    "expected": "Sí, contempla eliminación voluntaria en periodos definidos por el calendario académico."
+  },
+  {
+    "question": "Según el Régimen de Estudios 2023, ¿se permite la postergación de estudios y bajo qué condición general?",
+    "expected": "Sí, la postergación es posible dentro de los plazos y procedimientos establecidos por la normativa."
+  },
+  {
+    "question": "De acuerdo al Régimen de Estudios 2023, ¿qué regla general existe para la apelación de calificaciones?",
+    "expected": "Existe un procedimiento de apelación dentro de un plazo acotado ante las instancias académicas correspondientes."
+  },
+  {
+    "question": "En el Régimen de Estudios 2023, ¿se establece exigencia de asistencia o requisitos para evaluación continua?",
+    "expected": "Sí, se contemplan requisitos de evaluación y, cuando corresponda, de asistencia según el plan de estudios."
+  },
+  {
+    "question": "Según el Régimen de Estudios 2023, ¿qué ocurre con los estudiantes que incurren en causal de eliminación académica?",
+    "expected": "Se aplican las causales y procedimientos de eliminación académica definidos por la normativa institucional."
+  },
+  {
+    "question": "De acuerdo a la normativa, ¿qué documentos son fuente oficial para resolver dudas académicas del pregrado?",
+    "expected": "El Reglamento de Régimen de Estudios, el Reglamento de Convivencia Universitaria y el Calendario Académico vigente."
+  }
+]
