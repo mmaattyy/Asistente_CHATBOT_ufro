@@ -1,4 +1,63 @@
-env/
+# ============================================
+# Archivos de Python
+# ============================================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# ============================================
+# Entornos virtuales
+# ============================================
+env/
+venv/
+.venv/
+
+# ============================================
+# Archivos de configuración sensibles
+# ============================================
 .env
+.env.*
+!.env.example   # permite subir solo el ejemplo
+
+# ============================================
+# Archivos y carpetas de índices generados
+# ============================================
+index/
+index.faiss
+*.npz
+*.npy
+meta.jsonl
+data/chunks.jsonl
+
+# ============================================
+# Datos temporales y resultados de evaluación
+# ============================================
+results.csv
+results_*.csv
+*.jsonl
+*.tmp
+
+# ============================================
+# Archivos de usuario/editor
+# ============================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================================
+# Otros binarios/pesados que no deben versionarse
+# ============================================
+*.pdf
+*.docx
+*.pptx
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+*.gif
