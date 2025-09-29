@@ -1,0 +1,7 @@
+openai
+sentence-transformers
+faiss-cpu
+pypdf
+pandas
+python-dotenv
+requests
