@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Asistente UFRO (RAG)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    body { margin: 0; background: #0f172a; color: #e2e8f0; }
+    .container { max-width: 880px; margin: 32px auto; padding: 0 16px; }
+    .card { background: #111827; border: 1px solid #1f2937; border-radius: 14px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,.25); }
+    h1 { margin-top: 0; font-size: 22px; letter-spacing: .2px; }
+    label { display:block; margin: 10px 0 6px; color: #cbd5e1; font-size: 14px; }
+    select, textarea, button { width: 100%; box-sizing: border-box; }
+    select, textarea { background: #0b1220; color: #e5e7eb; border: 1px solid #243146; border-radius: 10px; padding: 10px 12px; }
+    textarea { min-height: 120px; resize: vertical; }
+    button { margin-top: 12px; padding: 12px 14px; background: #2563eb; color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
+    button[disabled] { opacity: .6; cursor: not-allowed; }
+    .output { white-space: pre-wrap; background:#0b1220; border:1px solid #243146; border-radius: 10px; padding: 14px; }
+    .muted { color: #9ca3af; font-size: 13px; }
+    .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 720px) { .row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Asistente UFRO (RAG)</h1>
+
+      <div class="row">
+        <div>
+          <label for="provider">Modelo</label>
+          <select id="provider">
+            <option value="chatgpt">ChatGPT</option>
+            <option value="deepseek">DeepSeek</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="question">Pregunta</label>
+      <textarea id="question" placeholder="Escribe tu consulta..."></textarea>
+
+      <button id="sendBtn">Preguntar</button>
+      <p class="muted" id="status"></p>
+
+      <h3>Respuesta</h3>
+      <div class="output" id="answer">—</div>
+
+      <h3>Referencias</h3>
+      <div class="output" id="refs">—</div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const btn = $("sendBtn");
+    const provider = $("provider");
+    const question = $("question");
+    const answer = $("answer");
+    const refs = $("refs");
+    const statusEl = $("status");
+
+    btn.addEventListener("click", async () => {
+      const q = question.value.trim();
+      const prov = provider.value;
+      if (!q) {
+        alert("Escribe una pregunta.");
+        return;
+      }
+
+      btn.disabled = true;
+      statusEl.textContent = "Consultando...";
+      answer.textContent = "—";
+      refs.textContent = "—";
+
+      try {
+        const res = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ provider: prov, question: q })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Error en la consulta");
+
+        answer.textContent = data.answer || "Sin respuesta.";
+        refs.textContent = (data.references && data.references.length)
+          ? data.references.map(r => "• " + r).join("\n")
+          : "Sin referencias.";
+      } catch (err) {
+        answer.textContent = "";
+        refs.textContent = "";
+        alert(err.message || err);
+      } finally {
+        btn.disabled = false;
+        statusEl.textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>
