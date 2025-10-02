@@ -5,4 +5,3 @@ pypdf
 pandas
 python-dotenv
 requests
-tiktoken
