@@ -20,6 +20,7 @@ python -m venv env
 pip install -r requirements.txt
 
 # Crear archivo .env en la raíz del proyecto con tus API keys
+
 # Generar embeddings e índice FAISS:
 python chunk_embed.py ingest --data_dir data/docs --out_dir index --chunk_size 400 --overlap 70
 python build_faiss.py
@@ -61,7 +62,7 @@ La vigencia se debe actualizar de forma periódica para asegurar que las respues
 
 | doc_id | Documento                           | Fuente (URL)                                   | Vigencia |
 |--------|--------------------------------------|-----------------------------------------------|----------|
-| D1     | Calendario Académico 2025           | [UFRO - Calendario Académico](https://www.ufro.cl/calendario-academico) | Año 2025 |
+| D1     | Calendario Académico 2025           | UFRO - Calendario Académico | Año 2025 |
 | D2     | Reglamento de Régimen de Estudios   | Documento PDF oficial UFRO                     | 2023     |
 | D3     | Reglamento de Convivencia Universitaria | Documento PDF oficial UFRO                 | 2023     |
 
