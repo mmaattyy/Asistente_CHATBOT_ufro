@@ -60,10 +60,10 @@ La vigencia se debe actualizar de forma periódica para asegurar que las respues
 
 ## 📌 Tabla de Trazabilidad de Documentos
 
-| doc_id | Documento                           | Fuente (URL)                                   | Vigencia |
-|--------|--------------------------------------|-----------------------------------------------|----------|
-| D1     | Calendario Académico 2025           | UFRO - Calendario Académico | Año 2025 |
-| D2     | Reglamento de Régimen de Estudios   | Documento PDF oficial UFRO                     | 2023     |
-| D3     | Reglamento de Convivencia Universitaria | Documento PDF oficial UFRO                 | 2023     |
+| doc_id | Documento                               | Fuente                                 | Vigencia |
+|--------|-----------------------------------------|----------------------------------------|----------|
+| D1     | Calendario Académico 2025               | UFRO - Calendario Académico            | 2025     |
+| D2     | Reglamento de Régimen de Estudios       | Documento PDF oficial UFRO             | 2023     |
+| D3     | Reglamento de Convivencia Universitaria | Documento PDF oficial UFRO             | 2023     |
 
 ---
